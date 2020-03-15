@@ -3,15 +3,18 @@
 mybutton = document.querySelector(".up-btn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
+scrollFunction();
+window.onscroll = function () {
     scrollFunction()
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        mybutton.style.visibility = "visible";
+        mybutton.style.opacity = "1";
     } else {
-        mybutton.style.display = "none";
+        mybutton.style.visibility = "hidden";
+        mybutton.style.opacity = "0";
     }
 }
 
@@ -22,7 +25,8 @@ function topFunction() {
 }
 
 // Testimonials slider
-$(".slider").slick({
+$(document).ready(function() {
+    $(".slider").slick({
     centerMode: true,
     centerPadding: '0px',
     slidesToShow: 5,
@@ -76,5 +80,20 @@ $('.blog-items').slick({
         }
     ]
 });
-$(".slick-slide[data-slick-index='-3']").css("opacity", ".5");
-$(".blog-items .slick-slide[data-slick-index='2']").css("opacity", ".5");
+    // On init
+    $(".blog-items .slick-slide[data-slick-index='-3']").css("opacity", ".5");
+    $(".blog-items .slick-slide[data-slick-index='2']").css("opacity", ".5");
+    // On before slide change
+    $('.blog-items').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(".blog-items .slick-slide").css("opacity", "1");
+        $(".blog-items .slick-slide[data-slick-index='" + (nextSlide - 3) + "']").css("opacity", ".5");
+        $(".blog-items .slick-slide[data-slick-index='" + (nextSlide + 2) + "']").css("opacity", ".5");
+    });
+});
+// Navbar toggler
+$(".navbar-toggler").on("click", function() {
+    $(this).toggleClass("open");
+    $(".container").css("padding", "0px");
+    $(".navbar-collapse").toggleClass("open");
+});
+
