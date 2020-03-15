@@ -7,10 +7,6 @@ html {
     scroll-behavior: smooth;
 }
 /*General styles*/
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
 .green-btn, .join-btn {
     color: #fff;
     text-decoration: none;
@@ -32,6 +28,7 @@ html {
 }
 body {
     font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
 }
 body p {
     font-family: 'Montserrat', sans-serif !important;
@@ -78,10 +75,12 @@ header .container nav .logo img {
 }
 header .container nav .logo h2 {
     color: #fff;
+    margin-bottom: 0px;
 }
 header .container nav .nav-links ul {
     list-style: none;
     display: flex;
+    margin-bottom: 0px;
 }
 header .container nav .nav-links ul li {
     margin-left: 41px;
@@ -94,12 +93,37 @@ header .container nav .nav-links ul li a {
     text-decoration: none;
 }
 header .headline {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     text-align: center;
 }
+header .carousel {
+    height: 300px;
+    margin-top: 25%;
+    transform: translateY(-50%);
+}
+.carousel-inner {
+    overflow: unset;
+}
+header .carousel-indicators {
+    bottom: -50%;
+}
+header .carousel-indicators li {
+    width: 21px;
+    height: 21px;
+    border: 1px solid #CFCFCF;
+    border-radius: 50%;
+    background: transparent;
+}
+header .carousel-indicators li.active {
+    background-color: #27AE60;
+    border-color: #27AE60;
+}
+/*header .headline {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%,-50%);*/
+/*    text-align: center;*/
+/*}*/
 header .headline h1 {
     font-size: 72px;
     line-height: 72px;
@@ -341,6 +365,94 @@ header .headline h3 {
     padding: 60px 0px;
     background-color: #F1F1F1;
 }
+#testimonials .slider {
+    margin-top: 44px;
+}
+#testimonials .slide .slide-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 66px;
+}
+#testimonials .slide p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #484848;
+    margin-bottom: 62px;
+}
+#testimonials .slide h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 5px;
+}
+#testimonials .slick-prev, #testimonials .slick-next {
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 100;
+    border: solid #95989A;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    color: transparent;
+    background: none;
+    height: 40px;
+    border-radius: 0px;
+    width: 40px;
+}
+#testimonials .slick-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 99999;
+    transform: translateY(-50%) rotate(135deg);
+}
+#testimonials .slick-next {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);;
+    right: 0;
+}
+#testimonials .slide h4 {
+    font-size: 24px;
+    color: #111;
+}
+#testimonials .slide .slide-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(57,57,57, .33);
+}
+#testimonials .slick-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+}
+#testimonials .slide .slide-content {
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    width:400%;
+}
+#testimonials .slick-center .slide-content {
+    visibility: visible;
+    opacity: 1;
+}
+#testimonials .slick-center .slide-img::before {
+    background-color: transparent;
+    transition: background-color .5s ease;
+}
+#testimonials .slide .slide-img img {
+    width: 100%;
+    height: 100%;
+}
 /*Blog section styles*/
 #blog {
     padding: 60px 0px;
@@ -350,7 +462,22 @@ header .headline h3 {
     margin-top: 43px;
     margin-bottom: 60px;
 }
+#blog .blog-items .blog-item .blog-content {
+    padding: 0px 40px;
+}
+#blog .blog-items .slick-slide {
+    margin: 0px 15px;
+    outline: none;
+}
+#blog .blog-items .slick-cloned:last-child {
+    opacity: 0.5;
+}
+#blog .blog-items .slick-prev, #blog .blog-items .slick-next {
+    display: none !important;
+}
+
 #blog .blog-items .blog-item img {
+    width: 100%;
     margin-bottom: 30px;
 }
 #blog .blog-items .blog-item h3 {

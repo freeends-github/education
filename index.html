@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <title>Education</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -11,6 +14,7 @@
 <!--Up button-->
 <button onclick="topFunction()" type="button" class="green-btn up-btn">^</button>
 <!--    Header -->
+
 <header>
     <div class="container">
         <nav>
@@ -41,11 +45,35 @@
                 </ul>
             </div>
         </nav>
-
-        <div class="headline">
-            <h1>Knowledge is power</h1>
-            <h3>Any succesfull career starts with good education</h3>
-            <a href="#" class="green-btn">Learn more</a>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="headline">
+                        <h1>Knowledge is power</h1>
+                        <h3>Any succesfull career starts with good education</h3>
+                        <a href="#" class="green-btn">Learn more</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="headline">
+                        <h1>Second slide label</h1>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <a href="#" class="green-btn">Learn more</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <<div class="headline">
+                        <h1>Third slide label</h1>
+                        <h3>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</h3>
+                        <a href="#" class="green-btn">Learn more</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
@@ -283,10 +311,64 @@
             <h2>What client say</h2>
             <div class="slider">
                 <div class="slide">
-                    <img src="img/Ellipse%204.png">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
-                    <h3>John Doe</h3>
-                    <h4>CEO Smart Edu</h4>
+                    <div class="slide-img">
+                        <img src="img/Ellipse%204@2x.png">
+                    </div>
+                    <div class="slide-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
+                        <h3>John Doe</h3>
+                        <h4>CEO Smart Edu</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img">
+                        <img src="img/Ellipse%204@2x.png">
+                    </div>
+                    <div class="slide-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
+                        <h3>John Doe</h3>
+                        <h4>CEO Smart Edu</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img">
+                        <img src="img/Ellipse%204@2x.png">
+                    </div>
+                    <div class="slide-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
+                        <h3>John Doe</h3>
+                        <h4>CEO Smart Edu</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img">
+                        <img src="img/Ellipse%204@2x.png">
+                    </div>
+                    <div class="slide-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
+                        <h3>John Doe</h3>
+                        <h4>CEO Smart Edu</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img">
+                        <img src="img/Ellipse%204@2x.png">
+                    </div>
+                    <div class="slide-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
+                        <h3>John Doe</h3>
+                        <h4>CEO Smart Edu</h4>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-img">
+                        <img src="img/Ellipse%204@2x.png">
+                    </div>
+                    <div class="slide-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip excas.</p>
+                        <h3>John Doe</h3>
+                        <h4>CEO Smart Edu</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -295,7 +377,42 @@
         <h2>Blog</h2>
         <div class="blog-items">
             <div class="blog-item">
-                <img src="img/Rectangle%2077.png">
+                <img src="img/Rectangle%2077@2x.png">
+                <div class="blog-content">
+                    <h3>How to use music in education</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu mod tempor incididunt ut labore et</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="img/Rectangle%2077@2x.png">
+                <div class="blog-content">
+                    <h3>How to use music in education</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu mod tempor incididunt ut labore et</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="img/Rectangle%2077@2x.png">
+                <div class="blog-content">
+                    <h3>How to use music in education</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu mod tempor incididunt ut labore et</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="img/Rectangle%2077@2x.png">
+                <div class="blog-content">
+                    <h3>How to use music in education</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu mod tempor incididunt ut labore et</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="img/Rectangle%2077@2x.png">
+                <div class="blog-content">
+                    <h3>How to use music in education</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu mod tempor incididunt ut labore et</p>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="img/Rectangle%2077@2x.png">
                 <div class="blog-content">
                     <h3>How to use music in education</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu mod tempor incididunt ut labore et</p>
@@ -322,8 +439,7 @@
                 <form>
                     <input type="text" name="full-name" placeholder="Full Name">
                     <input type="email" name="e-mail" placeholder="E-mail">
-                    <textarea name="message" placeholder="Message" rows="12">
-                    </textarea>
+                    <textarea name="message" placeholder="Message" rows="12"></textarea>
                     <button type="submit" class="green-btn">Send</button>
                 </form>
                 <div class="map-items">
@@ -376,6 +492,10 @@
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
