@@ -57,8 +57,8 @@ $('.blog-items').slick({
     centerMode: true,
     centerPadding: '200px',
     slidesToShow: 4,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
         {
             breakpoint: 768,

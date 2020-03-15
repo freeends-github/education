@@ -600,6 +600,10 @@ header .headline h3 {
 /*Newsletter section styles*/
 #newsletter {
     background-image: url('img/Rectangle 65@2x.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     width: 100%;
     padding: 75px 0px;
 }
