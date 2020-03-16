@@ -36,16 +36,16 @@ $(document).ready(function() {
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '0px',
                 slidesToShow: 3
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '0px',
                 slidesToShow: 1
             }
         }
@@ -61,20 +61,20 @@ $('.blog-items').slick({
     autoplaySpeed: 2000,
     responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 1024,
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '0px',
                 slidesToShow: 3
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '0px',
                 slidesToShow: 1
             }
         }
@@ -91,9 +91,14 @@ $('.blog-items').slick({
     });
 });
 // Navbar toggler
-$(".navbar-toggler").on("click", function() {
+$(".toggler").on("click", function() {
     $(this).toggleClass("open");
-    $(".container").css("padding", "0px");
-    $(".navbar-collapse").toggleClass("open");
+    $("body").toggleClass("navbar-open");
+});
+$(".nav-links a").on("click", function() {
+    if($("body").hasClass("navbar-open")) {
+      $(".toggler").removeClass("open");
+      $("body").removeClass("navbar-open");
+    }
 });
 

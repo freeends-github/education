@@ -70,15 +70,58 @@ header::after {
     background-color: rgba(26,26,26, .8);
     z-index: -1;
 }
-header .navbar-toggler {
+header .toggler {
     border: none;
     outline: none;
     position: relative;
     width: 30px;
     height: 26px;
     padding: 0;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
 }
-header .navbar-toggler span {
+@media screen and (max-width: 1024px) {
+    body {
+        overflow: auto;
+    }
+    body.navbar-open {
+        overflow: hidden;
+    }
+    header .toggler {
+        visibility: visible;
+        opacity: 1;
+        z-index: 99999999999999999999 !important;
+    }
+    header .nav-links {
+        transform: translateX(-1000px);
+        transition: transform .5s ease;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(39, 174, 96);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    header .container nav .nav-links ul li a:after {
+        border-bottom: 2px solid #fff !important;
+    }
+    .toggler.open ~ .nav-links {
+        transform: translateX(0);
+    }
+    header .nav-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .nav-links ul li {
+        padding: 30px 0px;
+    }
+    header .nav-links ul li a {
+        font-size: 30px !important;
+    }
+}
+header .toggler span {
     transition: all 0.5s ease;
     width: 30px;
     height: 3px;
@@ -86,44 +129,30 @@ header .navbar-toggler span {
     position: absolute;
     right: 0;
 }
-header .navbar-toggler span:first-child {
+header .toggler span:first-child {
     top: 0px;
 }
-header .navbar-toggler span:nth-child(2) {
+header .toggler span:nth-child(2) {
     top: 10px;
 }
-header .navbar-toggler span:last-child {
+header .toggler span:last-child {
     top: 20px;
 }
-header .navbar-toggler {
+header .toggler {
     z-index: 999999999999;
 }
-.navbar-collapse.show .navbar-nav {
-    margin-top: 50%;
-    transform: translateY(-50%);
-}
-.navbar-collapse.show {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,.5);
-    z-index: 999999999;
-    padding: 0px;
-    margin: 0px;
-}
-.navbar-toggler.open span {
+
+.toggler.open span {
     transition: all 0.3s ease;
 }
-.navbar-toggler.open span:first-child {
+.toggler.open span:first-child {
      transform: rotate(45deg);
      top: 10px;
 }
-.navbar-toggler.open span:nth-child(2) {
+.toggler.open span:nth-child(2) {
      display: none;
  }
-.navbar-toggler.open span:last-child {
+.toggler.open span:last-child {
      transform: rotate(-45deg);
      top: 10px;
  }
@@ -733,6 +762,9 @@ footer .container ul li a:hover:after {
 
 /* Media queries */
 @media screen and (max-width: 1024px) {
+    header .carousel {
+        margin-top: 55%;
+    }
     #education .container {
         flex-direction: column;
         align-items: flex-start;
@@ -771,6 +803,9 @@ footer .container ul li a:hover:after {
     }
     #contact .container .contact-items form {
         margin-bottom: 30px;
+    }
+    #testimonials .slide .slide-content {
+        width: 250%;
     }
     footer .container {
         flex-direction: column;
@@ -825,6 +860,9 @@ footer .container ul li a:hover:after {
     #contact .container .map-items .contact-info .contact-info-item {
         margin-bottom: 30px;
     }
+    #testimonials .slide .slide-content {
+        width: 100%;
+    }
     footer .container .footer-links {
         width: 100%;
     }
@@ -835,5 +873,8 @@ footer .container ul li a:hover:after {
     .up-btn {
         padding: 10px;
         font-size: 16px;
+    }
+    #newsletter .subscribe form input {
+        margin-right: 0px;
     }
 }
