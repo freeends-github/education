@@ -1,0 +1,393 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	cursor: default;
+}
+li{
+	list-style-type:none;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+	outline:none;
+}
+button{
+	cursor: pointer;
+}
+.header_slider{
+	overflow:hidden;
+	width:100%;
+	background-color:rgba(0,0,0,0.9);
+	height:700px;
+}
+.header_slider>div{
+	width:100%;
+	height:100%;
+    background-image: url(./images/Path\ 1@2x.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	overflow:hidden;
+}
+header{
+	width:65%;
+	margin:48px auto 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.llogo_container{
+	display: flex;
+	align-items: center;
+}
+.llogo_container h1{
+	font:700 24px/32px 'Nunito Sans';
+	color:white;
+	text-transform: uppercase;
+	margin-left:10px;
+}
+.list_container{
+	display:flex;
+	align-items: center;
+}
+.list_container li{
+	margin-left:40px;
+}
+.list_container li a{
+	font:700 18px/24px 'Nunito Sans';
+	color:white;
+}
+.slider1_section{
+	width:65%;
+	margin:auto;
+}
+.slider1_part{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+/* .slider1 .slick-list{
+	height:50%;
+} */
+.slider1_items{
+	margin-top:195px;
+	display:inline-flex;
+	flex-flow:column;
+	align-items:center;
+}
+.slider1_items h2{
+	font:700 70px/70px 'Nunito Sans';
+	color:white;
+}
+.slider1_items p{
+	font:700 24px/32px 'Nunito Sans';
+	color:white;
+	margin-top:10px;
+}
+.learn_more{
+	background-color:#27AE61;
+	color:white;
+	padding:18px 28px;
+	font:400 24px/29px Montserrat;
+	border-radius:30px;
+	margin-top:53px;
+}
+.slider1_part ul{
+	display:flex;
+	justify-content:center;
+	margin-top:143px;
+	margin-bottom: 30px;
+}
+.slider1_part ul li{
+	width:21px;
+	height:21px;
+	margin-left:30px;	
+	border-radius:50%;
+}
+.slider1_part ul li button{
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+	background-color:transparent;
+	color:transparent;
+	border:1px solid white;
+	outline:none;
+}
+.slider1_part ul .slick-active button{
+	background-color:#27AE61;
+}
+.slider1_section ul li:first-child{
+	margin-left:0;
+}
+.about_section{
+	background-color:white;
+}
+.about_section>div{
+	width:65%;
+	margin:60px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+.contact_info{
+	width:35%;
+}
+.contact_info h2{
+	font:700 36px/48px 'Nunito Sans';
+	text-transform: capitalize; 
+}
+.contact_info p{
+	font:400 18px/24px Montserrat;
+	margin-top:21px;
+}
+.contact-items-container{
+	display: flex;
+	flex-flow:column;
+}
+.contact_items{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top:45px;
+}
+.contact_items h3{
+	width:80%;
+	margin-left:30px;
+	font:700 30px/42px 'Nunito Sans';
+}
+.features_section{
+	background-color:#F1F1F1;
+	overflow: hidden;
+}
+.features_section>div{
+	width:65%;
+	margin:66px auto 0 auto;
+}
+.headline{
+	font: 700 48px/60px 'Nunito Sans';
+	text-align: center;
+}
+.features_info{
+	margin-top:44px;
+	margin-bottom: 80px;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(2,1fr);
+	grid-gap:60px 90px;
+}
+.features_items{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.features_imgs{
+	width:170px;
+	height:170px;
+	background-color:white;
+	border-radius: 50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.features_items h2{
+	font: 700 30px/36px 'Nunito Sans';
+	margin-top:12px;
+}
+.features_items p{
+	font:400 18px/24px Montserrat;
+	text-align: center;
+	margin-top:10px;
+}
+.courses_section{
+	background-color: white;
+}
+.courses_section>div{
+	width:65%;
+	margin:auto;
+	margin-top:65px;
+}
+.courses_container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin:43px 0 60px 0;
+}
+.courses_items{
+	background-color:#F1F1F1;
+	width:31.8%;
+	overflow: hidden;
+}
+.courses_items img{
+	width:100%;
+}
+.courses_info{
+	padding:31px 36px 22px 31px;
+	border-bottom:3px solid #CFCFCF;
+}
+.courses_info h2{
+	font:700 30px/36px 'Nunito Sans';
+}
+.courses_info p{
+	font:400 18px/24px Montserrat;
+	margin-top:20px;
+}
+.courses_info2{
+	padding:22px 25px 60px 60px;
+}
+.courses_info2 h3{
+	font:700 24px/32px 'Nunito Sans';
+	padding:15px 0;
+	text-align:center;
+}
+.courses_info2 .grey_line{
+	width:80%;
+	height:3px;
+	background-color:#CFCFCF;
+}
+.join_link{
+	background-color:#27AE61;
+	margin:0 23px;
+	margin-bottom: 23px;
+	padding:14px 0;
+	text-align: center;
+	border-radius: 30px;
+}
+.join_link a{
+	font:700 24px/32px 'Nunito Sans';
+	color:white;
+}
+.view_all{
+	text-align:center;
+	margin-bottom: 30px;
+}
+.view_all a{
+	color:#1A1A1A;
+	font:700 24px/32px 'Nunito Sans';
+}
+.teachers_section{
+	background-color:#F1F1F1;
+	overflow: hidden;
+}
+.teachers_section>div{
+	width:65%;
+	margin:67px auto 78px auto;
+}
+.teachers_container{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(3,1fr);
+	grid-gap:70px 66px;
+	margin-top:40px;
+}
+.teachers_items{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+.teachers_info{
+	width:65%;
+	margin-left:35px;
+}
+.teachers_info h2{
+	font:700 30px/36px 'Nunito Sans';
+}
+.teachers_info p{
+	font:700 24px/30px 'Nunito Sans';
+	color:#27AE61;
+}
+.programs_section{
+	background-color:white;
+	overflow: hidden;
+}
+.programs_section>div{
+	width:65%;
+	margin:80px auto 100px auto;
+}
+.programs_container{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(2,1fr);
+	grid-gap:30px;
+}
+.programs_items{
+	position: relative;
+}
+.programs_items img{
+	width:100%;
+}
+.programs_info{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display: flex;
+	flex-flow:column;
+	justify-content: center;
+	align-items:center;
+	background-color:rgba(39, 174, 97,0.6);
+}
+.programs_info h2{
+	font:700 30px/36px 'Nunito Sans';
+	color:white;
+	text-align:center;
+}
+.programs_info p{
+	font:400 18px/24px Montserrat;
+	color:white;
+	padding:0 50px;
+	text-align:center;
+	margin-top:20px;
+}
+.clients_section{
+	background-color:#F1F1F1;
+	overflow: hidden;
+}
+.clients_section>div{
+	width:65%;
+	margin:76px auto ;
+	position: relative;
+}
+.clients_container{
+	width:100%;
+	margin-top:44px;
+	overflow: hidden;
+}
+.clients_items{
+	display:inline-flex;
+	flex-flow: column;
+	align-items: center;
+}
+.clients_items p{
+	margin-top:66px;
+	font:400 18px/24px Montserrat;
+	padding:0 200px;
+	text-align:center;
+}
+.clients_items h2{
+	font:700 30px/36px 'Nunito Sans';
+	margin-top:62px;
+}
+.clients_items h3{
+	font:700 24px/32px 'Nunito Sans';
+}
+.clients_section i{
+	position:absolute;
+	font-size:50px;
+	color:black;
+	z-index:2;
+}
+.clients_section .client_left{
+	top:50%;
+	transform: translateY(-50%);
+	left:0;
+	cursor:pointer;
+}
+.clients_section .client_right{
+	top:50%;
+	transform: translateY(-50%);
+	right:0;
+	cursor:pointer;
+}
