@@ -21,11 +21,47 @@ button{
 input{
 	cursor:text;
 }
+.list_pop{
+	position:fixed;
+	width:100%;
+	height:0vh;
+	background-color:rgba(0,0,0,0.95);
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	z-index : 8;
+	transition: width 1s ease-in;
+	overflow: hidden;
+	clip:auto;
+}
+.list_pop ul{
+	display: none;
+}
+.list_pop ul li{
+	list-style:none;
+	margin-top:20px;
+	text-align:center;
+}
+.list_pop ul li a{
+	text-decoration: none;
+	font: 700 18px/30px Poppins;
+	color:#27AE61;
+	cursor:pointer;
+}
+.list_pop i{
+	position:absolute;
+	top:10%;
+	right:10%;
+	font-size:30px;
+	color:#27AE61;
+	cursor:pointer;
+	display:none;
+}
 .header_slider{
 	overflow:hidden;
 	width:100%;
 	background-color:rgba(0,0,0,0.9);
-	height:700px;
+	/* height:700px; */
 }
 .header_slider>div{
 	width:100%;
@@ -65,6 +101,11 @@ header{
 	font:700 18px/24px 'Nunito Sans';
 	color:white;
 }
+.first_header i{
+	color:white;
+	font-size:40px;
+	display: none;
+}
 .slider1_section{
 	width:65%;
 	margin:auto;
@@ -82,6 +123,7 @@ header{
 	display:inline-flex;
 	flex-flow:column;
 	align-items:center;
+	outline:none;
 }
 .slider1_items h2{
 	font:700 70px/70px 'Nunito Sans';
@@ -138,6 +180,12 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items:center;
+}
+.about_img{
+	width:50%;
+}
+.about_img img{
+	width:100%;
 }
 .about_info{
 	width:35%;
@@ -199,6 +247,9 @@ header{
 	justify-content: center;
 	align-items: center;
 }
+.features_imgs img{
+	width:40%;
+}
 .features_items h2{
 	font: 700 30px/36px 'Nunito Sans';
 	margin-top:12px;
@@ -210,6 +261,7 @@ header{
 }
 .courses_section{
 	background-color: white;
+	overflow:hidden;
 }
 .courses_section>div{
 	width:65%;
@@ -219,19 +271,36 @@ header{
 .courses_container{
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 	margin:43px 0 60px 0;
 }
 .courses_items{
 	background-color:#F1F1F1;
 	width:31.8%;
 	overflow: hidden;
+	padding-bottom: 23px;
+	display:inline-flex;
+	flex-flow:column;
 }
-.courses_items img{
+/* .courses_img{
+	height:40%;
+} */
+.courses_img img{
 	width:100%;
+	/* height:100%; */
+}
+.courses-info_container{
+	display: flex;
+	flex-flow:column;
+	justify-content: flex-end;
+}
+.courses-info2_container{
+	display: flex;
+	flex-flow:column;
+	justify-content: flex-end;
 }
 .courses_info{
-	padding:31px 36px 22px 31px;
+	padding:31px 15px 22px 31px;
 	border-bottom:3px solid #CFCFCF;
 }
 .courses_info h2{
@@ -242,22 +311,21 @@ header{
 	margin-top:20px;
 }
 .courses_info2{
-	padding:22px 25px 60px 60px;
+	padding:22px 40px 60px 40px;
 }
 .courses_info2 h3{
 	font:700 24px/32px 'Nunito Sans';
 	padding:15px 0;
-	/* text-align:center; */
+	text-align:center;
 }
 .courses_info2 .grey_line{
-	width:80%;
+	width:100%;
 	height:3px;
 	background-color:#CFCFCF;
 }
 .join_link{
 	background-color:#27AE61;
 	margin:0 23px;
-	margin-bottom: 23px;
 	padding:14px 0;
 	text-align: center;
 	border-radius: 30px;
@@ -290,9 +358,12 @@ header{
 	margin-top:40px;
 }
 .teachers_items{
-	display: flex;
+	display: inline-flex;
 	justify-content: space-between;
 	align-items:center;
+}
+.teachers_items img{
+	width:29%;
 }
 .teachers_info{
 	width:65%;
@@ -379,7 +450,7 @@ header{
 	outline:none;
 }
 .clients_section .slick-center .clients_imgs .overlay{
-	background-color:white;
+	background-color:transparent;
 }
 .clients_section .slick-center .clients_info{
 	display:flex;
@@ -402,7 +473,7 @@ header{
 	top:0;
 	border-radius:50%;
 	background-color: black;
-	opacity:0.2;
+	opacity:0.5;
 	z-index:2;
 }
 .clients_info p{
@@ -453,8 +524,10 @@ header{
 	display: inline-flex;
 	flex-flow:column;
 	align-items: center;
-	/* width:270px !important;*/
-	margin-left:30px; 
+	/* width:270px !important;
+	margin-left:30px;  */
+	margin-left:15px;
+	margin-right:15px;
 	outline:none;
 }
 .blog_items img{
@@ -566,6 +639,7 @@ header{
 	font:400 18px/24px 'Nunito Sans';
 	cursor: text;
 	outline:none;
+	border:1px solid #484848;
 }
 .contact_inputs textarea::placeholder{
 	font:400 18px/24px 'Nunito Sans';
@@ -622,4 +696,320 @@ footer{
 }
 footer header{
 	margin-top:0;
+}
+
+/* Responsive */
+
+@media only screen and (max-width:1380px){
+	.container{
+		width:75% !important;
+	}
+	.about_info {
+		width: 40%;
+	}
+	.teachers_container {
+		grid-gap: 50px 40px;
+	}
+
+}
+@media only screen and (max-width:1124px){
+	.container{
+		width:80% !important;
+	}
+	.headline {
+		font: 700 40px/60px 'Nunito Sans';
+	}
+	.llogo_container h1 {
+		font: 700 21px/32px 'Nunito Sans';
+	}
+	.list_container li {
+ 	   margin-left: 30px;
+	}
+	.list_container li a {
+		font: 700 16px/24px 'Nunito Sans';
+	}
+	.slider1_items h2 {
+		font: 700 55px/70px 'Nunito Sans';
+	}
+	.about_info {
+		width: 45%;
+	}
+	.courses_container{
+		flex-flow:column;
+		align-items:center;
+	}
+	.courses_items{
+		margin-top:30px;
+		width:unset;
+		max-width:460px;
+	}
+	.features_info{
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(3,1fr);
+	}
+	.clients_section .slick-center .clients_info {
+		width: 200%;
+	}
+	.teachers_container {
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(4,1fr);
+	}
+	.teachers_info h2 {
+		font: 700 25px/36px 'Nunito Sans';
+	}
+	.teachers_info p {
+		font: 700 18px/30px 'Nunito Sans';
+	}
+	.programs_container {
+		margin-top: 43px;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(3,1fr);
+		grid-gap: 30px;
+	}
+	.programs_info h2 {
+		font: 700 26px/36px 'Nunito Sans';
+		padding:0 10px;
+	}
+	.contact_container{
+		flex-flow:column-reverse;
+	}
+	.contact_inputs{
+		width:100%;
+		margin-top:50px;
+		align-items:center;
+	}
+	.contact_map{
+		width:100%;
+	}
+	.email_section>div{
+		flex-flow:column;
+	}
+	.form{
+		margin-top:20px;
+	}
+}
+@media only screen and (max-width:900px){
+	.container{
+		width:85% !important;
+	}
+	.llogo_container h1 {
+    	font: 700 19px/32px 'Nunito Sans';
+	}
+	.list_container li {
+		margin-left: 20px;
+	}
+}
+@media only screen and (max-width:785px){
+	.container{
+		width:88% !important;
+	}
+	.llogo_container h1 {
+		display:none;
+	}
+	.about_section>div{
+		flex-flow:column;
+	}
+	.about_img{
+		width:100%;
+	}
+	.about_info{
+		width:100%;
+		margin-top:20px;
+	}
+	.about_items h3 {
+		font: 700 25px/42px 'Nunito Sans';
+	}
+	.programs_info p {
+		padding: 0 35px;
+	}
+	.form button {
+		margin-left:18px;
+	}
+}
+@media only screen and (max-width:620px){
+	.contanier{
+		width:90% !important;
+	}
+	.first_header ul{
+		display: none;
+	}
+	.first_header i{
+		display: block;
+	}
+	.slider1_items h2 {
+		font: 700 46px/50px 'Nunito Sans';
+		text-align: center;
+	}
+	.learn_more {
+		font: 400 18px/24px Montserrat;
+	}
+	.slider1_items p {
+		font: 700 16px/24px 'Nunito Sans';
+		text-align: center;
+		padding:0 20px;
+	}
+	.slider1_part ul {
+		margin-top: 100px;
+		margin-bottom:30px;
+	}
+	.features_info{
+		grid-template-columns: 1fr;
+	}
+	.features_items{
+		max-width:370px;
+		margin:auto;
+	}
+	.courses_container{
+		display:unset;
+	}
+	.courses_items{
+		margin-left:15px;
+		margin-right:15px;
+	}
+	.courses_container .slick-dots{
+		display:flex !important;
+		justify-content:center;
+		margin-top:40px;
+		margin-bottom:30px;
+	}
+	.courses_container .slick-dots li{
+		border-radius:50%;
+		width:18px;
+		height:18px;
+		margin-right:5px;
+	}
+	.courses_container .slick-dots li:last-child{
+		margin-right:0;
+	}
+	.courses_container .slick-dots li button{
+		width:100%;
+		height:100%;
+		border-radius:50%;
+		background-color:transparent;
+		color:transparent;
+		border:1px solid black;
+		outline:none;
+	}
+	.courses_container .slick-dots .slick-active button{
+		background-color: #27AE61;
+	}
+	.view_all{
+		display:none;
+	}
+	.programs_container{
+		grid-template-columns:auto;
+	}
+	.programs_items{
+		max-width:370px;
+		margin:auto;
+	}
+	.clients_section i{
+		display: none;
+	}
+	.clients_section .slick-center .clients_info {
+		width:100%;
+	}
+	.contact_address{
+		flex-flow:column;
+	}
+	.address_items {
+		width:162px;
+		margin-top:20px;
+	}
+	.second_header{
+		flex-flow:column;
+	}
+	.second_header .llogo_container h1{
+		display: block;
+	}
+	.second_header ul{
+		margin-top:50px;
+		flex-flow:column;
+	}
+	.second_header ul li{
+		margin-top:20px;
+	}
+	.clients_container .slick-dots{
+		display:flex !important;
+		margin-top:20px;
+		justify-content: center;
+	}
+	.clients_container .slick-dots li{
+		border-radius:50%;
+		width:20px;
+		height:20px;
+		margin-right:10px;
+	}
+	.clients_container .slick-dots li:last-child{
+		margin-right:0;
+	}
+	.clients_container .slick-dots li button{
+		width:100%;
+		height:100%;
+		border-radius:50%;
+		background-color:transparent;
+		color:transparent;
+		border:1px solid black;
+		outline:none;
+	}
+	.clients_container .slick-dots .slick-active button{
+		background-color: #27AE61;
+	}
+	.teachers_container{
+		display:unset;
+	}
+	.teachers_items{
+		flex-flow:column;
+		align-items:center;
+	}
+	.teachers_items img {
+		width: 50%;
+	}
+	.teachers_info{
+		margin-left:0;
+		width:100%;
+	}
+	.teachers_info h2,
+	.teachers_info p{
+		text-align:center;
+	}
+	.teachers_container .slick-dots{
+		display:flex !important;
+		justify-content:center;
+		margin-top:40px;
+	}
+	.teachers_container .slick-dots li{
+		border-radius:50%;
+		width:18px;
+		height:18px;
+		margin-right:5px;
+	}
+	.teachers_container .slick-dots li:last-child{
+		margin-right:0;
+	}
+	.teachers_container .slick-dots li button{
+		width:100%;
+		height:100%;
+		border-radius:50%;
+		background-color:transparent;
+		color:transparent;
+		border:1px solid black;
+		outline:none;
+	}
+	.teachers_container .slick-dots .slick-active button{
+		background-color: #27AE61;
+	}
+	.email_headline{
+		text-align:center;
+	}
+	.form{
+		flex-flow:column;
+	}
+	.form input {
+		padding: 10px 10px 0px 10px;
+	}
+	.form button{
+		margin-top:15px;
+	}
 }

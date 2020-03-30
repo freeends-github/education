@@ -9,9 +9,20 @@
 </head>
 <body>
 	<script src="https://kit.fontawesome.com/b33fd54741.js" crossorigin="anonymous"></script>
+	<section class="list_pop">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#about">About us</a></li>
+			<li><a href="#courses">Courses</a></li>
+			<li><a href="#teachers">Teachers</a></li>
+			<li><a href="#programs">Programs</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		<i class="fas fa-times"></i>
+	</section>
 	<section class="header_slider">
-		<div class="container">
-			<header>
+		<div>
+			<header class="container first_header">
 				<div class="llogo_container">
 					<img src="./images/logo.png" alt="">
 					<h1>education</h1>
@@ -24,8 +35,9 @@
 					<li><a href="#programs">Programs</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
+				<i class="fas fa-bars"></i>
 			</header>
-			<section class="slider1_section">
+			<section class="slider1_section container">
 				<div class="slider1_part">
 					<nav class="slider1_items">
 						<h2>Knowledge is power</h2>
@@ -60,7 +72,7 @@
 	<main>
 		<section class="about_section" id="about">
 			<div class="container">
-				<img src="./images/Rectangle 31.png" alt="">
+				<nav class="about_img"><img src="./images/Rectangle 31.png" alt=""></nav>
 				<nav class="about_info">
 					<h2>education</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu</p>
@@ -141,46 +153,58 @@
 				<h1 class="headline">Courses</h1>
 				<nav class="courses_container">
 					<div class="courses_items">
-						<img src="./images/Rectangle 71.png" alt="">
-						<nav class="courses_info">
-							<h2>Web Design</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						</nav>
-						<nav class="courses_info2">
-							<h3>Time : 3 pm</h3>
-							<div class="grey_line"></div>
-							<h3>Teacher: Ressie Rottman</h3>
-							<div class="grey_line"></div>
-						</nav>
-						<nav class="join_link"><a href="#">Join Now</a></nav>
+						<nav class="courses_img"><img src="./images/Rectangle 71.png" alt=""></nav>
+						<div class="courses-info_container">
+							<nav class="courses_info">
+								<h2>Web Design</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</nav>
+							<div class="courses-info2_container">
+								<nav class="courses_info2">
+									<h3>Time : 3 pm</h3>
+									<div class="grey_line"></div>
+									<h3>Teacher: Ressie Rottman</h3>
+									<div class="grey_line"></div>
+								</nav>
+								<nav class="join_link"><a href="#">Join Now</a></nav>
+							</div>
+						</div>
 					</div>
 					<div class="courses_items">
-						<img src="./images/amera.png" alt="">
-						<nav class="courses_info">
-							<h2>Photography</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						</nav>
-						<nav class="courses_info2">
-							<h3>Time : 6 pm</h3>
-							<div class="grey_line"></div>
-							<h3>Teacher: Floyd Fukuda</h3>
-							<div class="grey_line"></div>
-						</nav>
-						<nav class="join_link"><a href="#">Join Now</a></nav>
+						<nav class="courses_img"><img src="./images/amera.png" alt=""></nav>
+						<div class="courses-info_container">
+							<nav class="courses_info">
+								<h2>Photography</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</nav>
+							<div class="courses-info2_container">
+								<nav class="courses_info2">
+									<h3>Time : 6 pm</h3>
+									<div class="grey_line"></div>
+									<h3>Teacher: Floyd Fukuda</h3>
+									<div class="grey_line"></div>
+								</nav>
+								<nav class="join_link"><a href="#">Join Now</a></nav>
+							</div>
+						</div>
 					</div>
 					<div class="courses_items">
-						<img src="./images/Path 3.png" alt="">
-						<nav class="courses_info">
-							<h2>Digital Marketing</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-						</nav>
-						<nav class="courses_info2">
-							<h3>Time : 10 pm</h3>
-							<div class="grey_line"></div>
-							<h3>Teacher: Elena Cully</h3>
-							<div class="grey_line"></div>
-						</nav>
-						<nav class="join_link"><a href="#">Join Now</a></nav>
+						<nav class="courses_img"><img src="./images/Path 3.png" alt=""></nav>
+						<div classes="courses-info_container">
+							<nav class="courses_info">
+								<h2>Digital Marketing</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</nav>
+							<div class="courses-info2_container">
+								<nav class="courses_info2">
+									<h3>Time : 10 pm</h3>
+									<div class="grey_line"></div>
+									<h3>Teacher: Elena Cully</h3>
+									<div class="grey_line"></div>
+								</nav>
+								<nav class="join_link"><a href="#">Join Now</a></nav>
+							</div>
+						</div>
 					</div>
 				</nav>
 				<nav class="view_all"><a href="#">View all</a></nav>
@@ -487,7 +511,7 @@
 		</section>
 	</main>
 	<footer>
-		<header>
+		<header class="container second_header">
 			<div class="llogo_container">
 				<img src="./images/logo.png" alt="">
 				<h1>education</h1>
